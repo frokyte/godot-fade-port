@@ -1,30 +1,37 @@
 # godot-fade-port
 
-An independent port of selected FADE Engine editor design ideas to Godot.
+**The official Godot port of FADE by Frokyte Games, made by the same creators
+at Frokyte Central.**
 
-The current prototype focuses on a compact, Unreal-inspired dark inspector.
-It does not contain proprietary FADE source code or assets.
+FADE Engine itself is proprietary. This repository is a Godot addon and editor
+theme that brings selected FADE styling and workflow ideas into Godot. It does
+not distribute FADE Engine source code.
 
 ## Current status
 
-- **Early prototype**
-- Godot 4.x editor plugin
-- Custom XYZ property editor for selected `Node3D` transform properties
-- Initial dark theme resource with base panel, button, input, and tree styling
+Early development prototype:
+- Godot editor addon
+- Custom XYZ inspector fields for selected `Node3D` transform properties
+- Initial dark editor theme resource
+- GitHub Actions workflow for packaging tagged releases
 
-## Install the plugin
+## Install
 
-1. Copy `addons/fade_editor` into your Godot project.
-2. Open **Project → Project Settings → Plugins**.
-3. Enable **FADE Editor**.
+1. Download the ZIP attached to a GitHub Release.
+2. Extract it. The archive contains a `fade_editor/` folder at its root.
+3. Move that folder directly into your Godot project's `res://addons/`
+   directory.
+4. Enable **FADE Editor** under **Project → Project Settings → Plugins**.
 
-## Theme
+The resulting path should be
+`res://addons/fade_editor/plugin.cfg`.
 
-The starting theme resource is `themes/fade-dark.tres`. It is a work in
-progress. It is not yet a complete editor-wide replacement and may need
-additional theme item overrides for the exact Godot version and editor layout.
+The theme is included in the same addon folder at
+`res://addons/fade_editor/themes/fade-dark.tres`. To use it as the editor's
+custom theme, select it under **Editor → Editor Settings → Interface → Theme**.
+It is still an early theme and does not yet restyle every editor panel.
 
 ## Development
 
-See [DEVELOPMENT.md](DEVELOPMENT.md) for implemented work, known gaps, validation
-status, and the roadmap.
+See [DEVELOPMENT.md](DEVELOPMENT.md) for the project identity, implementation
+status, release packaging structure, known gaps, and roadmap.
