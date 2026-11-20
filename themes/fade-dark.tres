@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3]
+
+[resource]
+default_font_size = 13
+
+; Base palette: restrained charcoal surfaces with cool neutral text.
+; This resource is an initial theme foundation, not a complete editor skin.
