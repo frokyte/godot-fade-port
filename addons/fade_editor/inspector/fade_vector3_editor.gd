@@ -8,6 +8,10 @@ const AXIS_COLORS := [
 	Color("#6b9fe3")
 ]
 
+const FIELD_FONT_SIZE := 16
+const FIELD_MIN_WIDTH := 84
+const FIELD_MIN_HEIGHT := 32
+
 var _property_name := ""
 var _fields: Array[SpinBox] = []
 var _updating := false
@@ -17,22 +21,26 @@ func setup(property_name: String) -> void:
 	_property_name = property_name
 
 	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 6)
+	row.add_theme_constant_override("separation", 8)
 
 	for axis in range(3):
 		var axis_box := HBoxContainer.new()
-		axis_box.add_theme_constant_override("separation", 3)
+		axis_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		axis_box.add_theme_constant_override("separation", 4)
 
 		var axis_label := Label.new()
 		axis_label.text = AXIS_NAMES[axis]
-		axis_label.custom_minimum_size.x = 12
+		axis_label.custom_minimum_size.x = 14
 		axis_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		axis_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		axis_label.add_theme_color_override("font_color", AXIS_COLORS[axis])
+		axis_label.add_theme_font_size_override("font_size", FIELD_FONT_SIZE)
 		axis_box.add_child(axis_label)
 
 		var field := SpinBox.new()
 		field.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		field.custom_minimum_size.x = 62
+		field.custom_minimum_size = Vector2(FIELD_MIN_WIDTH, FIELD_MIN_HEIGHT)
+		field.add_theme_font_size_override("font_size", FIELD_FONT_SIZE)
 		field.step = 0.01
 		field.rounded = false
 		field.value_changed.connect(_on_axis_changed.bind(axis))

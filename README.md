@@ -12,7 +12,7 @@ not distribute FADE Engine source code.
 Early development prototype:
 - Godot editor addon
 - Custom XYZ inspector fields for selected `Node3D` transform properties
-- Initial dark editor theme resource
+- Unreal-inspired dark editor theme redesign with consistent 16 px typography (work in progress)
 - GitHub Actions workflow for packaging tagged releases
 
 ## Install

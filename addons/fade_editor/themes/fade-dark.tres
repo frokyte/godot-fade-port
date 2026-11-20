@@ -1,83 +1,230 @@
-[gd_resource type="Theme" load_steps=5 format=3]
+[gd_resource type="Theme" load_steps=10 format=3]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_editor_background"]
+bg_color = Color(0.075, 0.08, 0.09, 1)
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
-bg_color = Color(0.105, 0.113, 0.129, 1)
-border_color = Color(0.19, 0.205, 0.23, 1)
+bg_color = Color(0.105, 0.113, 0.125, 1)
+border_color = Color(0.19, 0.205, 0.225, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+content_margin_left = 8.0
+content_margin_top = 6.0
+content_margin_right = 8.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_raised"]
+bg_color = Color(0.13, 0.14, 0.155, 1)
+border_color = Color(0.22, 0.235, 0.255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 content_margin_left = 8.0
 content_margin_top = 6.0
 content_margin_right = 8.0
 content_margin_bottom = 6.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
-bg_color = Color(0.16, 0.17, 0.19, 1)
-border_color = Color(0.25, 0.27, 0.3, 1)
+bg_color = Color(0.145, 0.155, 0.17, 1)
+border_color = Color(0.245, 0.26, 0.28, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
-bg_color = Color(0.21, 0.23, 0.26, 1)
-border_color = Color(0.31, 0.34, 0.38, 1)
+bg_color = Color(0.19, 0.205, 0.225, 1)
+border_color = Color(0.32, 0.345, 0.37, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
+bg_color = Color(0.105, 0.16, 0.23, 1)
+border_color = Color(0.25, 0.48, 0.72, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_field"]
-bg_color = Color(0.075, 0.08, 0.09, 1)
-border_color = Color(0.22, 0.24, 0.27, 1)
+bg_color = Color(0.065, 0.07, 0.08, 1)
+border_color = Color(0.22, 0.24, 0.265, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-content_margin_left = 6.0
-content_margin_top = 3.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 8.0
+content_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_field_focus"]
+bg_color = Color(0.065, 0.07, 0.08, 1)
+border_color = Color(0.28, 0.52, 0.78, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 8.0
+content_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_selected"]
+bg_color = Color(0.12, 0.135, 0.155, 1)
+border_color = Color(0.28, 0.52, 0.78, 1)
+border_width_bottom = 2
+content_margin_left = 12.0
+content_margin_top = 7.0
+content_margin_right = 12.0
+content_margin_bottom = 7.0
 
 [resource]
-default_font_size = 13
+default_font_size = 16
 
-Label/colors/font_color = Color(0.82, 0.84, 0.87, 1)
-Button/colors/font_color = Color(0.86, 0.87, 0.89, 1)
-Button/colors/font_hover_color = Color(0.96, 0.97, 0.99, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+; ---------------------------------------------------------------------------
+; Shared editor palette — Unreal-inspired charcoal surfaces and blue accent.
+; ---------------------------------------------------------------------------
+
+Editor/colors/base_color = Color(0.075, 0.08, 0.09, 1)
+Editor/colors/accent_color = Color(0.28, 0.52, 0.78, 1)
+Editor/colors/font_focus_color = Color(0.96, 0.97, 0.99, 1)
+Editor/colors/font_hover_color = Color(0.91, 0.93, 0.96, 1)
+Editor/colors/font_pressed_color = Color(0.84, 0.89, 0.96, 1)
+Editor/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Editor/colors/font_disabled_color = Color(0.48, 0.5, 0.54, 1)
+Editor/colors/font_readonly_color = Color(0.68, 0.7, 0.74, 1)
+Editor/colors/font_placeholder_color = Color(0.48, 0.5, 0.54, 1)
+Editor/colors/selection_color = Color(0.16, 0.29, 0.43, 1)
+Editor/colors/axis_x_color = Color(0.88, 0.35, 0.32, 1)
+Editor/colors/axis_y_color = Color(0.43, 0.76, 0.42, 1)
+Editor/colors/axis_z_color = Color(0.34, 0.58, 0.91, 1)
+Editor/colors/property_color_x = Color(0.88, 0.35, 0.32, 1)
+Editor/colors/property_color_y = Color(0.43, 0.76, 0.42, 1)
+Editor/colors/property_color_z = Color(0.34, 0.58, 0.91, 1)
+
+; ---------------------------------------------------------------------------
+; Typography. Explicit sizes prevent controls from falling back to tiny,
+; inconsistent defaults. Keep ordinary editor text at 15 px.
+; ---------------------------------------------------------------------------
+
+Label/font_sizes/font_size = 16
+Button/font_sizes/font_size = 16
+LineEdit/font_sizes/font_size = 16
+TextEdit/font_sizes/font_size = 16
+CodeEdit/font_sizes/font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+Tree/font_sizes/font_size = 16
+ItemList/font_sizes/font_size = 16
+TabBar/font_sizes/font_size = 16
+TabContainer/font_sizes/font_size = 16
+OptionButton/font_sizes/font_size = 16
+MenuButton/font_sizes/font_size = 16
+MenuBar/font_sizes/font_size = 16
+PopupMenu/font_sizes/font_size = 16
+CheckBox/font_sizes/font_size = 16
+CheckButton/font_sizes/font_size = 16
+SpinBox/font_sizes/font_size = 16
+Slider/font_sizes/font_size = 16
+ProgressBar/font_sizes/font_size = 16
+TooltipLabel/font_sizes/font_size = 15
+
+; ---------------------------------------------------------------------------
+; Text colors.
+; ---------------------------------------------------------------------------
+
+Label/colors/font_color = Color(0.84, 0.86, 0.89, 1)
+Label/colors/font_hover_color = Color(0.96, 0.97, 0.99, 1)
+Button/colors/font_color = Color(0.86, 0.88, 0.91, 1)
+Button/colors/font_hover_color = Color(0.98, 0.99, 1, 1)
+Button/colors/font_pressed_color = Color(0.98, 0.99, 1, 1)
+Button/colors/font_disabled_color = Color(0.48, 0.5, 0.54, 1)
+LineEdit/colors/font_color = Color(0.91, 0.93, 0.96, 1)
+LineEdit/colors/font_placeholder_color = Color(0.48, 0.5, 0.54, 1)
+TextEdit/colors/font_color = Color(0.88, 0.9, 0.93, 1)
+Tree/colors/font_color = Color(0.82, 0.84, 0.88, 1)
+Tree/colors/font_selected_color = Color(1, 1, 1, 1)
+Tree/colors/font_hovered_color = Color(0.96, 0.97, 0.99, 1)
+Tree/colors/selection_color = Color(0.15, 0.27, 0.4, 1)
+Tree/colors/cursor_color = Color(0.28, 0.52, 0.78, 1)
+Tree/colors/guide_color = Color(0.2, 0.22, 0.25, 1)
+ItemList/colors/font_color = Color(0.82, 0.84, 0.88, 1)
+ItemList/colors/font_selected_color = Color(1, 1, 1, 1)
+ItemList/colors/guide_color = Color(0.2, 0.22, 0.25, 1)
+TabBar/colors/font_selected_color = Color(0.98, 0.99, 1, 1)
+TabBar/colors/font_unselected_color = Color(0.66, 0.69, 0.73, 1)
+TabBar/colors/font_hovered_color = Color(0.9, 0.92, 0.95, 1)
+TabContainer/colors/font_selected_color = Color(0.98, 0.99, 1, 1)
+TabContainer/colors/font_unselected_color = Color(0.66, 0.69, 0.73, 1)
+TabContainer/colors/font_hovered_color = Color(0.9, 0.92, 0.95, 1)
+PopupMenu/colors/font_color = Color(0.86, 0.88, 0.91, 1)
+PopupMenu/colors/font_hover_color = Color(1, 1, 1, 1)
+PopupMenu/colors/font_accelerator_color = Color(0.6, 0.63, 0.68, 1)
+
+; ---------------------------------------------------------------------------
+; Surfaces and controls.
+; ---------------------------------------------------------------------------
+
+Panel/styles/panel = SubResource("StyleBoxFlat_panel")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_panel")
+PopupPanel/styles/panel = SubResource("StyleBoxFlat_panel_raised")
 Button/styles/normal = SubResource("StyleBoxFlat_button")
 Button/styles/hover = SubResource("StyleBoxFlat_button_hover")
-Button/styles/pressed = SubResource("StyleBoxFlat_button_hover")
-Panel/styles/panel = SubResource("StyleBoxFlat_panel")
-LineEdit/colors/font_color = Color(0.9, 0.91, 0.93, 1)
-LineEdit/colors/font_placeholder_color = Color(0.48, 0.5, 0.54, 1)
+Button/styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+Button/styles/disabled = SubResource("StyleBoxFlat_panel")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_field")
-LineEdit/styles/focus = SubResource("StyleBoxFlat_field")
-Tree/colors/font_color = Color(0.79, 0.81, 0.84, 1)
-Tree/colors/font_selected_color = Color(0.98, 0.99, 1, 1)
-Tree/colors/selection_color = Color(0.16, 0.28, 0.43, 1)
-Tree/colors/cursor_color = Color(0.28, 0.46, 0.68, 1)
-Tree/colors/guide_color = Color(0.2, 0.22, 0.25, 1)
-Button/constants/h_separation = 6
+LineEdit/styles/focus = SubResource("StyleBoxFlat_field_focus")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_field")
+SpinBox/styles/normal = SubResource("StyleBoxFlat_field")
+SpinBox/styles/focus = SubResource("StyleBoxFlat_field_focus")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_button")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_button_hover")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+MenuButton/styles/normal = SubResource("StyleBoxFlat_button")
+MenuButton/styles/hover = SubResource("StyleBoxFlat_button_hover")
+MenuButton/styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+TabBar/styles/tab_selected = SubResource("StyleBoxFlat_tab_selected")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_tab_selected")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_panel")
+Tree/styles/selected = SubResource("StyleBoxFlat_button_pressed")
+Tree/styles/selected_focus = SubResource("StyleBoxFlat_button_pressed")
+Tree/styles/cursor = SubResource("StyleBoxFlat_field_focus")
+ItemList/styles/selected = SubResource("StyleBoxFlat_button_pressed")
+ItemList/styles/selected_focus = SubResource("StyleBoxFlat_button_pressed")
+
+; ---------------------------------------------------------------------------
+; Editor-specific style resources. These are the surfaces used by Godot's
+; editor shell, not just the controls inside an individual project.
+; ---------------------------------------------------------------------------
+
+EditorStyles/styles/Background = SubResource("StyleBoxFlat_editor_background")
+EditorStyles/styles/PanelForeground = SubResource("StyleBoxFlat_panel")
+EditorStyles/styles/Content = SubResource("StyleBoxFlat_editor_background")
+EditorStyles/styles/BottomPanel = SubResource("StyleBoxFlat_panel")
+EditorStyles/styles/ContextualToolbar = SubResource("StyleBoxFlat_panel_raised")
+EditorStyles/styles/ScriptEditor = SubResource("StyleBoxFlat_editor_background")
+EditorStyles/styles/DebuggerPanel = SubResource("StyleBoxFlat_panel")
