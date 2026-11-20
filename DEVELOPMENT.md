@@ -17,14 +17,34 @@ Godot project addon that users can install without replacing their engine.
 
 - Added the Godot editor addon at `addons/fade_editor/`.
 - Registered a custom `EditorInspectorPlugin` for `Node3D` objects.
-- Added a compact three-column XYZ editor for `position`,
-  `rotation_degrees`, and `scale`.
-- Used red, green, and blue axis labels to make vector components easier to scan.
-- Added the initial FADE dark Godot Theme resource inside the addon at
-  `addons/fade_editor/themes/fade-dark.tres`.
-- Added a GitHub Actions release workflow. When a version tag matching
-  `v*` is pushed, it packages the addon folder and attaches the ZIP to a
-  GitHub Release.
+- Added a three-column XYZ editor for `position`, `rotation_degrees`, and
+  `scale`, with explicit readable font sizing and field dimensions.
+- Added red, green, and blue axis labels.
+- Reworked the editor theme around Unreal Engine's dark charcoal surfaces,
+  blue selection accents, clearer panel separation, and consistent typography.
+- Added explicit 16 px font sizes for common editor controls to avoid tiny,
+  inconsistent fallback sizes.
+- Added editor-shell style overrides through Godot's `EditorStyles` theme type,
+  alongside the regular Control theme types.
+- Added a GitHub Actions release workflow. The user has confirmed that the
+  workflow succeeds and that the downloaded addon and theme were installed and
+  tested in a separate project.
+
+## Design direction
+
+The Unreal Engine editor is the primary visual reference. The port should
+translate its design language into Godot rather than imitate every pixel:
+
+- Charcoal surfaces with subtle elevation differences.
+- Thin borders and clear separation between docked panels.
+- Blue active, focused, and selected states.
+- Consistent readable typography across labels, fields, menus, and tabs.
+- Compact controls with enough height and spacing to remain legible.
+- A clearer hierarchy in the Inspector and Scene Tree.
+
+The custom theme is an override layer on top of Godot's editor theme. Some
+editor areas may still use built-in or editor-specific drawing paths and need
+separate investigation.
 
 ## Release package layout
 
@@ -48,45 +68,45 @@ The theme ships inside the same folder as the addon so the release is a single,
 self-contained download. The repository's `addons/` folder is the source of
 truth for the release package.
 
-## Not implemented yet
+## Known limitations
 
-- A complete editor-wide visual match to FADE.
-- Custom dock layouts, viewport toolbars, scene tree, filesystem, and bottom panel.
-- Full typography, icons, spacing, focus, hover, pressed, and selection states.
-- Additional inspector controls for colors, enums, resources, arrays, and nested
-  properties.
-- A polished setup flow for selecting the custom editor theme.
-- Automated tests and validation inside the Godot editor.
-- A tagged GitHub Release and a tested downloadable ZIP.
+- The theme cannot freely rearrange Godot's dock layout or replace the viewport.
+- Some editor-specific controls may not inherit standard Control theme items.
+- Editor menus, toolbars, scene tree rows, filesystem entries, and inspector
+  sections still need screenshot-based comparison against the Unreal reference.
+- The theme must be tested at different editor scaling settings and on different
+  display densities.
+- The current 16 px typography is an explicit baseline, not a claim that every
+  custom editor widget is already covered.
+- No automated visual regression test currently exists.
 
 ## Next steps
 
-1. Verify the addon and custom property editor in the target Godot version.
-2. Expand the theme resource with the editor theme items required for a closer
-   FADE appearance.
-3. Confirm the theme loads through Godot's editor custom-theme setting.
-4. Style the Inspector, Scene tree, FileSystem dock, tabs, menus, and bottom panel.
-5. Add dedicated property editors only where they improve on Godot's native UX.
-6. Add screenshots and a small demo project to make visual regressions easy to spot.
-7. Test the release workflow by pushing a version tag and installing its ZIP into
-   a clean Godot project.
+1. Validate the redesigned theme in Godot 4.6.x.
+2. Capture before/after screenshots at the same editor scale and window size.
+3. Inspect the main toolbar, scene tree, FileSystem, Inspector, tabs, menus, and
+   bottom panel against the Unreal reference images.
+4. Add dedicated theme items only where the screenshot comparison shows a real
+   gap.
+5. Add custom Inspector section headers and property layouts where native
+   controls cannot achieve the desired hierarchy.
+6. Add a small demo project and visual regression screenshots.
+7. Publish a new tagged release after the redesigned theme has been tested.
 
-## Installation from the repository
+## Installation
 
 1. Copy the `addons/fade_editor` directory into your Godot project's
    `res://addons/` directory.
 2. Open **Project → Project Settings → Plugins**.
 3. Enable **FADE Editor**.
+4. Open **Editor → Editor Settings → Interface → Theme** and select
+   `res://addons/fade_editor/themes/fade-dark.tres` as the custom editor theme.
 
-The theme resource is located at
-`res://addons/fade_editor/themes/fade-dark.tres`. Godot's editor custom theme is
-configured separately in **Editor → Editor Settings → Interface → Theme**. The
-theme file is an early work in progress and is not yet a complete visual
-replacement for every part of the editor.
+The editor theme is separate from the project runtime theme.
 
 ## Validation status
 
-The addon, theme, and release workflow have been authored but have not yet been
-validated in a running Godot editor or through a real tagged GitHub Release.
-Treat the current state as an early development build, not a release-ready
-version.
+The previous release workflow, addon installation, and theme selection have
+been confirmed by the project maintainer in a separate test project. The
+redesigned theme in this branch still requires validation in a running Godot
+4.6.x editor. Do not mark the redesign as tested until that check is complete.
