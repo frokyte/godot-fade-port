@@ -22,7 +22,7 @@ Godot project addon that users can install without replacing their engine.
 - Added red, green, and blue axis labels.
 - Reworked the editor theme around Unreal Engine's dark charcoal surfaces,
   blue selection accents, clearer panel separation, and consistent typography.
-- Added explicit 15 px font sizes for common editor controls to avoid tiny,
+- Added explicit 16 px font sizes for common editor controls to avoid tiny,
   inconsistent fallback sizes.
 - Added editor-shell style overrides through Godot's `EditorStyles` theme type,
   alongside the regular Control theme types.
@@ -76,7 +76,7 @@ truth for the release package.
   sections still need screenshot-based comparison against the Unreal reference.
 - The theme must be tested at different editor scaling settings and on different
   display densities.
-- The current 15 px typography is an explicit baseline, not a claim that every
+- The current 16 px typography is an explicit baseline, not a claim that every
   custom editor widget is already covered.
 - No automated visual regression test currently exists.
 
