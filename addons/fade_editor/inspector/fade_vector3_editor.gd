@@ -8,9 +8,9 @@ const AXIS_COLORS := [
 	Color("#6b9fe3")
 ]
 
-const FIELD_FONT_SIZE := 15
-const FIELD_MIN_WIDTH := 76
-const FIELD_MIN_HEIGHT := 30
+const FIELD_FONT_SIZE := 16
+const FIELD_MIN_WIDTH := 84
+const FIELD_MIN_HEIGHT := 32
 
 var _property_name := ""
 var _fields: Array[SpinBox] = []
